@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@300;400;700&display=swap");
+body {
+  color: #000;
+}
+
+h1 {
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #ccc;
+  padding: 50px;
+  clip-path: polygon(50px 0px, 100% 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0px 100%, 0px 50px);
+}
