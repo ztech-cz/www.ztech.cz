@@ -180,6 +180,12 @@ a.button:hover, a.button:active {
   text-decoration: underline;
 }
 
+a.ics {
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+}
+
 dl dt {
   font-weight: 700;
   margin-bottom: 5px;

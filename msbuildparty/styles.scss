@@ -177,6 +177,12 @@ a {
 
         }
     }
+
+    &.ics {
+        display: inline-block;
+        padding: 5px;
+        font-size: 14px;
+    }
 }
 
 dl {
