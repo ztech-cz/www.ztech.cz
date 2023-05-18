@@ -1,19 +1,192 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@300;400;700&display=swap');
 
-body {
-    color: #000;
-}
+$White: #fff;
+$Black: #000;
+$Gray: #e8e8e8;
+$DarkGray: #ccc;
+$Red: #ba1b02;
+$HeadingFont: Ubuntu, Arial, Helvetica, sans-serif;
+$BodyFont: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-h1 {
-    font-family: Ubuntu, Arial, Helvetica, sans-serif;
-    font-size: 250%;
-    font-weight: normal;
+html {
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
+    background-color: #fff;
+    color: #000;
+    font-family: $BodyFont;
+    font-size: 18px;
+
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+
+        >header {
+            @media (min-width: 900px) {
+                text-align: right;
+                min-height: 100px;
+            }
+
+            margin-bottom: 20px;
+
+            img {
+                @media (max-width: 899px) {
+                    height: 75px;
+                }
+
+                @media (min-width: 900px) {
+                    height: 100px;
+                    float: left;
+                    margin: 0 20px 0 50px;
+                }
+
+                clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+            }
+
+            h1 {
+                font-family: $HeadingFont;
+                font-size: 250%;
+                font-weight: 300;
+                margin: 0;
+                padding: 10px 0 0 0;
+
+                b {
+                    font-weight: 700;
+                }
+            }
+
+            div {
+                font-family: $HeadingFont;
+            }
+        }
+
+        >main {
+            @media (max-width: 899px) {
+                padding: 20px;
+                clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+            }
+
+            @media (min-width: 900px) {
+                padding: 50px;
+                clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
+            }
+
+            background-color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        >footer {
+            margin-bottom: 20px;
+            color: $DarkGray;
+            font-size: 10px;
+
+            @media (max-width: 899px) {
+                text-align: center;
+            }
+
+            @media (min-width: 900px) {
+                text-align: right;
+                margin-right: 50px;
+            }
+
+            div {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    display: inline;
+
+                    @media (max-width: 899px) {
+                        margin: 0 10px;
+                    }
+
+                    @media (min-width: 900px) {
+                        margin: 0 0 0 20px;
+                    }
+                }
+            }
+
+            a:link,
+            a:visited {
+                color: $DarkGray;
+            }
+
+            a:hover,
+            a:active {
+                color: $Red;
+            }
+        }
+    }
 }
 
-main {
-    background-color: #ccc;
-    padding: 50px;
-    clip-path: polygon(50px 0px, 100% 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0px 100%, 0px 50px);
+h2 {
+    font-family: $HeadingFont;
+    font-size: 160%;
+    font-weight: 300;
+    color: $Red;
+}
+
+#map {
+    border: none;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+}
+
+.c {
+    text-align: center;
+}
+
+a {
+
+    &:link,
+    &:visited {
+        color: $Black;
+    }
+
+    &:hover,
+    &:active {
+        color: $Red;
+    }
+
+    &.button {
+        display: inline-block;
+        font-family: $HeadingFont;
+        font-size: 24px;
+        padding: 10px 1em;
+
+        &:link,
+        &:visited {
+            background-color: $Red;
+            color: $White;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $Black;
+            color: $White;
+            text-decoration: underline;
+
+        }
+    }
+}
+
+dl {
+    dt {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    dd {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
 }
